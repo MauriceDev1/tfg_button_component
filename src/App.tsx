@@ -1,30 +1,28 @@
-import { useState } from 'react'
 import Button from './components/Button'
 
 function App() {
   const data = [
     {
       id: 1,
-      title: 'Button 1',
+      title: 'Self service',
       link: '',
       color:'purple'
     },
     {
       id: 2,
-      title: 'Button 2',
+      title: 'TFG Synergy',
       link: '',
       color: 'blue'
     },
     {
       id: 3,
-      title: 'Button 3',
+      title: 'TFG Learn',
       link: '',
       color: 'red'
     },
   ]
   return (
-    <div class="w-full">
-      <div class="w-10/12 m-auto flex gap-3 py-3">
+    <div className="w-full flex flex-wrap sm:flex-nowrap gap-3 px-3 py-3">
         {data.map(d =>
           <Button 
             key={d.id}
@@ -33,7 +31,6 @@ function App() {
             color={d.color}
           />
         )}
-      </div>
     </div>
   )
 }
